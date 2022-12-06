@@ -10,7 +10,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col container mx-auto justify-center py-44 m-auto space-y-3">
-        <h1 className="text-center text-5xl font-bold">Let's Start Voting</h1>
+        <h1 className="text-center text-5xl font-bold">
+          Let&apos;s Start Voting
+        </h1>
       </div>
     </div>
   );
