@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,6 +14,33 @@ export default function Home() {
         <h1 className="text-center text-5xl font-bold">
           Let&apos;s Start Voting
         </h1>
+        <div className="text-center">
+          <span className="text-lg bg-zinc-100 py-1 px-3 font-medium">
+            Website Number 1 in Indonesia
+          </span>
+        </div>
+        <Image
+          src="/images/header-image.png"
+          alt="Picture of the header"
+          width={300}
+          height={300}
+          priority
+          objectPosition="center"
+          objectFit="contain"
+        />
+      </div>
+      <div className="flex flex-row items-center justify-center space-x-5">
+        <Link href="/vote/create" legacyBehavior>
+          <a className="bg-zinc-800 text-sm font-bold text-white w-40 text-center py-3 border-2 border-transparent hover:bg-zinc-200 hover:text-zinc-800">
+            Buat Vote Baru
+          </a>
+        </Link>
+        <span>atau</span>
+        <Link href="/participant" legacyBehavior>
+          <a className="bg-white text-sm font-bold text-zinc-800  border-zinc-800 border-2 w-40 text-center py-3 hover:bg-zinc-800 hover:text-white">
+            Ikutan Vote
+          </a>
+        </Link>
       </div>
     </div>
   );
