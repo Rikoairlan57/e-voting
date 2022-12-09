@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div className="flex justify-between py-3 container mx-auto">
       <Link href="/" legacyBehavior>
-        <a className="font-bold text-xl">Jujurly</a>
+        <a className="font-bold text-xl">E-Voting</a>
       </Link>
 
       <Button onClick={signIn} text="Login" />
