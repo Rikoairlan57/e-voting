@@ -48,7 +48,7 @@ export default function Login({ providers }: any) {
         <title>Login</title>
       </Head>
 
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a className="text-6xl mb-10 font-thin">Jujurly</a>
       </Link>
       {Object.values(providers).map((provider: any) => (
