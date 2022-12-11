@@ -58,3 +58,21 @@ const Alert = (props: Props) => {
 };
 
 export default Alert;
+
+export function showAlert(props: Props) {
+  const alert = document.createElement("div");
+  alert.id = "alert";
+  document.body.appendChild(alert);
+  const root = createRoot(alert);
+  root.render(
+    <Alert
+      isOpen={true}
+      title={props.title}
+      subtitle={props.subtitle}
+      positiveText={props.positiveText}
+      negativeText={props.negativeText}
+      onPositiveClick={props.onPositiveClick}
+      onNegativeClick={props.onNegativeClick}
+    />
+  );
+}
