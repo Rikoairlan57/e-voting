@@ -23,7 +23,7 @@ export default function DetailParticipate() {
     if (code === "") {
       showAlert({
         title: "Hmmh..",
-        subtitle: "Tolong masukkan kode yang benar",
+        subtitle: "Please enter the correct code",
       });
       return;
     }
@@ -35,7 +35,7 @@ export default function DetailParticipate() {
         if (!data) {
           showAlert({
             title: "Hmmh..",
-            subtitle: "Kode yang anda masukkan salah",
+            subtitle: "The code you entered is incorrect",
           });
           return;
         }
@@ -46,7 +46,7 @@ export default function DetailParticipate() {
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-5 container mx-auto">
       <Head>
-        <title>Berhasil Membuat Voting</title>
+        <title>Successfully Made Voting</title>
       </Head>
       <Image
         src={"/images/participate.png"}
@@ -55,13 +55,13 @@ export default function DetailParticipate() {
         height={180}
         objectFit="contain"
       />
-      <h1 className="text-4xl font-bold">Ikutan Voting </h1>
+      <h1 className="text-4xl font-bold">Take Voting </h1>
       <h2 className="w-full lg:w-1/2 text-center">
-        Untuk ikutan voting, kamu harus memasukkan kode voting yang sudah di
-        berikan panitia/penyelenggara
+        To take part in voting, you must enter the voting code that has been
+        entered give the committee/organizer
       </h2>
       <Form
-        placeholder="Masukkan Kode Voting"
+        placeholder="Enter Voting Code"
         value={code}
         onChange={setCode}
         className="w-full lg:w-1/3 mt-3"
@@ -73,7 +73,7 @@ export default function DetailParticipate() {
         className="w-1/3"
       />
       <button className="text-sm" onClick={() => router.push("/")}>
-        Kembali
+        Back
       </button>
     </div>
   );

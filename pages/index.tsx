@@ -32,13 +32,13 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center space-x-5">
           <Link href="/vote/create" legacyBehavior>
             <a className="bg-zinc-800 text-sm font-bold text-white w-40 text-center py-3 border-2 border-transparent hover:bg-zinc-200 hover:text-zinc-800">
-              Buat Vote Baru
+              Create New Votes
             </a>
           </Link>
           <span>atau</span>
           <Link href="/participant" legacyBehavior>
             <a className="bg-white text-sm font-bold text-zinc-800  border-zinc-800 border-2 w-40 text-center py-3 hover:bg-zinc-800 hover:text-white">
-              Ikutan Vote
+              Follow Vote
             </a>
           </Link>
         </div>
