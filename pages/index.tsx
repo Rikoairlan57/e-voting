@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Menu />
       <div className="flex flex-col container mx-auto justify-center py-44 m-auto space-y-3">
-        <h1 className="text-center text-5xl font-bold">Ayo Mulai Voting</h1>
+        <h1 className="text-center text-5xl font-bold">Let's Start Voting</h1>
         <div className="text-center ">
           <span className="text-lg bg-zinc-100 py-1 px-3 font-medium">
             Web Voting No.1 Di Indonesia
