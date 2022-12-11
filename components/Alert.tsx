@@ -37,7 +37,7 @@ const Alert = (props: Props) => {
                     setIsOpen(false);
                   }}
                 >
-                  {props.negativeText || "Kembali"}
+                  {props.negativeText || "Back"}
                 </button>
                 <Button
                   className={`${!props.onPositiveClick && "hidden"}`}
@@ -46,7 +46,7 @@ const Alert = (props: Props) => {
                     setIsOpen(false);
                   }}
                   size="sm"
-                  text={props.positiveText || "Ya"}
+                  text={props.positiveText || "Yes"}
                 />
               </div>
             </div>
