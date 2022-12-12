@@ -1,12 +1,10 @@
-import React from "react";
 interface Props {
   onChange: (value: string) => void;
   value: string;
   placeholder: string;
   className?: string;
 }
-
-const Form = (props: Props) => {
+export default function Form(props: Props) {
   return (
     <input
       type="text"
@@ -16,6 +14,4 @@ const Form = (props: Props) => {
       value={props.value}
     />
   );
-};
-
-export default Form;
+}

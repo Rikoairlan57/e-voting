@@ -1,4 +1,3 @@
-import React from "react";
 interface Props {
   onClick: () => void;
   text: string;
@@ -7,7 +6,7 @@ interface Props {
   isLoading?: boolean;
 }
 
-const Button = (props: Props) => {
+export default function Button(props: Props) {
   return (
     <button
       disabled={props.isLoading}
@@ -25,9 +24,7 @@ const Button = (props: Props) => {
           : "py-2 px-3"
       }`}
     >
-      {props.isLoading ? "loading..." : props.text}
+      {props.isLoading ? "Loading..." : props.text}
     </button>
   );
-};
-
-export default Button;
+}

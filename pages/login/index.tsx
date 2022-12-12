@@ -48,9 +48,10 @@ export default function Login({ providers }: any) {
         <title>Login</title>
       </Head>
 
-      <Link href="/" legacyBehavior>
-        <a className="text-6xl mb-10 font-thin">Jujurly</a>
+      <Link href="/">
+        <a className="text-6xl mb-10 font-thin">E-Voting</a>
       </Link>
+
       {Object.values(providers).map((provider: any) => (
         <div key={provider.name} className="w-1/3">
           <button

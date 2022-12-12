@@ -1,9 +1,11 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-export const authOptions = {
-  pages: {
-    signIn: "/login",
+// For more information on each option (and a full list of options) go to
+// https://next-auth.js.org/configuration/options
+export const authOptions={
+  pages:{
+    signIn: '/login'
   },
   providers: [
     GoogleProvider({
@@ -11,11 +13,10 @@ export const authOptions = {
       clientSecret: String(process.env.GOOGLE_SECRET),
     }),
   ],
-  callbacks: {
-    session({ session, token, user }: any) {
-      return session;
+  callbacks:{
+    session({ session, token, user }:any) {
+      return session // The return type will match the one returned in `useSession()`
     },
-  },
-};
-
+  }
+}
 export default NextAuth(authOptions);

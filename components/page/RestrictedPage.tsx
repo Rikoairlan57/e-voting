@@ -15,8 +15,8 @@ export default function RestrictedPage() {
         width={200}
         height={200}
       />
-      <h1 className="text-4xl font-bold">Login First Please!</h1>
-      <h2>To access this page, you must login first</h2>
+      <h1 className="text-4xl font-bold">Login Dulu Yah!</h1>
+      <h2>Untuk mengakses halaman ini, kamu wajib login terlebih dahulu</h2>
       <Button onClick={signIn} text="Login" size="lg" />
     </div>
   );

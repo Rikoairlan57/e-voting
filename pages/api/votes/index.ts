@@ -16,7 +16,6 @@ export default async function handle(
     return;
   }
 
-  // Create New Votes
   if (req.method === "POST") {
     const result = await prisma.votes.create({
       data: {
@@ -31,10 +30,7 @@ export default async function handle(
     });
 
     return res.json(result);
-  }
-
-  // Get All Votes by User
-  else if (req.method === "GET") {
+  } else if (req.method === "GET") {
     const result = await prisma.votes.findMany({
       where: {
         AND: [{ deletedAt: null }, { publisher: session.user.email }],
@@ -46,10 +42,7 @@ export default async function handle(
       data: result,
     };
     return res.json(response);
-  }
-
-  // Update Votes
-  else if (req.method === "PUT") {
+  } else if (req.method === "PUT") {
     const result = await prisma.votes.update({
       where: {
         code: req.body.code,

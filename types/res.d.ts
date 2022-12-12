@@ -1,4 +1,4 @@
-interface Response<T> {
-  status: number;
-  data?: T;
+interface Response<T>{
+     status: number
+     data?: T
 }
