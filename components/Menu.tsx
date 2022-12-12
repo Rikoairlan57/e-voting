@@ -1,17 +1,17 @@
-import React from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 import Button from "./Button";
 
-const Menu = () => {
+export default function Menu() {
   const { data: session } = useSession();
+
   return (
     <div className="flex justify-between py-3 container mx-auto">
-      <Link href="/" legacyBehavior>
+      <Link href="/">
         <a className="font-bold text-xl">E-Voting</a>
       </Link>
       {session ? (
-        <div>
+        <div className="space-x-3">
           <span>{session.user.name}</span>
           <Button onClick={signOut} text="Logout" />
         </div>
@@ -20,6 +20,4 @@ const Menu = () => {
       )}
     </div>
   );
-};
-
-export default Menu;
+}

@@ -70,26 +70,20 @@ export default function DetailOrEditVotes() {
 
   const updateVote = () => {
     //Validasi
-    if (title === "") {
-      showAlert({ title: "Hmmh", subtitle: "Judul tidak boleh kosong" });
+     if (title === "") {
+      showAlert({title:"Hmmh",subtitle:"Judul tidak boleh kosong"});
       return;
     }
     if (candidates.length < 2) {
-      showAlert({ title: "Hmmh", subtitle: "Minimal ada 2 kandidat" });
+      showAlert({title:"Hmmh",subtitle:"Minimal ada 2 kandidat"});
       return;
     }
     if (startDate > endDate) {
-      showAlert({
-        title: "Hmmh",
-        subtitle: "Tanggal mulai tidak boleh lebih besar dari tanggal selesai",
-      });
+      showAlert({title:"Hmmh",subtitle:"Tanggal mulai tidak boleh lebih besar dari tanggal selesai"});
       return;
     }
     if (candidates.some((c) => c.name === "")) {
-      showAlert({
-        title: "Hmmh",
-        subtitle: "Nama Kandidat tidak boleh kosong",
-      });
+      showAlert({title:"Hmmh",subtitle:"Nama Kandidat tidak boleh kosong"});
       return;
     }
 
@@ -108,14 +102,14 @@ export default function DetailOrEditVotes() {
         candidates: candidates.map((c) => ({
           name: c.name,
           title: c.title,
-          key: c.key,
+          key : c.key
         })),
         publisher: session.user.email,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-        showAlert({ title: "Yay!", subtitle: "Vote berhasil diubah" });
+        showAlert({title:"Yay!",subtitle:"Vote berhasil diubah"});
       });
   };
 

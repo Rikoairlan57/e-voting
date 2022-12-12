@@ -8,7 +8,7 @@ export default function Success() {
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-5">
       <Head>
-        <title>Berhasil Membuat Voting</title>
+        <title>Successfully Made Voting</title>
       </Head>
       <Image
         src={"/images/success.png"}
@@ -17,13 +17,15 @@ export default function Success() {
         height={322}
         objectFit="contain"
       />
-      <h1 className="text-4xl font-bold">Yeayy! Voting Berhasil Dibuat 🎉</h1>
-      <h2>Kamu bisa menyebarkan kode voting Jujurly dibawah ini</h2>
+      <h1 className="text-4xl font-bold">
+        Yeayy! Voting Successfully Created 🎉
+      </h1>
+      <h2>You can share the Honest voting code below</h2>
       <Button
         onClick={() => {
           router.push("/");
         }}
-        text="Cek Status"
+        text="Check Status"
         size="lg"
       />
     </div>

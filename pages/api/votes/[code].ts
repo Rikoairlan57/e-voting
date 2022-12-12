@@ -16,7 +16,6 @@ export default async function handle(
 
   const { code } = req.query;
 
-  // Get Details of the Vote
   if (req.method === "GET") {
     const votes = await prisma.votes.findFirst({
       select: {
@@ -35,8 +34,6 @@ export default async function handle(
         deletedAt: null,
       },
     });
-
-    // Get Participants of the Vote
     const participants = await prisma.participant.findMany({
       select: {
         candidate: true,
@@ -88,7 +85,6 @@ export default async function handle(
     return res.json(response);
   }
 
-  // Delete the Vote
   if (req.method === "DELETE") {
     const result = await prisma.votes.update({
       where: {

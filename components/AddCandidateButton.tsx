@@ -11,7 +11,7 @@ export default function AddCandidateButton(props: Props) {
       onClick={props.onClick}
     >
       <PlusIcon className="w-1/3" />
-      <span className="text-sm">Tambah</span>
+      <span className="text-sm">Add</span>
     </div>
   );
 }

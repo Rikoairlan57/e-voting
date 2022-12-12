@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -8,15 +9,15 @@ module.exports = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "2rem",
-        lg: "8rem",
-      },
+        DEFAULT: '2rem',
+        lg: '8rem',
+      }
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
+        'sans': ['Inter', 'sans-serif']
+      }
     },
   },
   plugins: [],
-};
+}

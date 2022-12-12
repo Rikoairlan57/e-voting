@@ -39,8 +39,8 @@ export default function DetailParticipate() {
   const submitVote = async () => {
     if (selectedCandidate) {
       showAlert({
-        title: "You Are Sure?",
-        subtitle: "You Will Choose " + selectedCandidate.name,
+        title: "Are You Sure?",
+        subtitle: "You will choose " + selectedCandidate.name,
         positiveText: "Yes, I am sure",
         negativeText: "No",
         onPositiveClick: async () => {
@@ -58,15 +58,15 @@ export default function DetailParticipate() {
             mutateParticipant();
             mutateVote();
             showAlert({
-              title: "Vote Sent",
-              subtitle: "Thank you for participating",
+              title: "Votes Sent",
+              subtitle: "thank you for participating",
             });
           }
         },
       });
     } else {
       showAlert({
-        title: "Vote failed ❌",
+        title: "Vote Failed ❌",
         subtitle: "Choose a candidate",
       });
     }
@@ -74,6 +74,7 @@ export default function DetailParticipate() {
 
   useEffect(() => {
     if (vote) {
+      // Check State by Event Time
       if (currentState === STATE_ENDED) {
         return;
       }
@@ -113,7 +114,7 @@ export default function DetailParticipate() {
   return (
     <div className={`mb-10 ${isLoading && "animate-pulse"}`}>
       <Head>
-        <title>Mulai Voting</title>
+        <title>Start Voting</title>
       </Head>
       <Menu />
       <div className="container mx-auto">
@@ -151,7 +152,7 @@ export default function DetailParticipate() {
               />
             ))}
         </div>
-
+        {/* End Candidate */}
         <div className="text-center mt-10">
           {session?.user?.email != vote?.publisher &&
             !participant &&
@@ -160,7 +161,7 @@ export default function DetailParticipate() {
                 onClick={() => {
                   submitVote();
                 }}
-                text="Choose a candidate"
+                text="Send My Votes"
                 size="lg"
                 isLoading={participantLoading}
               />

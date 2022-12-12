@@ -33,13 +33,13 @@ export default function CandidateForm(props: Props) {
       <h1 className="flex w-1/2 bg-zinc-100 aspect-square self-center text-center justify-center items-center text-4xl rounded-full">
         {props.candidate.key}
       </h1>
-      <label className="text-sm mt-3 mb-1">Nama Kandidat</label>
+      <label className="text-sm mt-3 mb-1">Candidate Name</label>
       <Form
         value={candidate.name}
         onChange={(e) => {
           setCandidate({ ...candidate, name: e });
         }}
-        placeholder="Masukkan Nama Kandidat"
+        placeholder="Enter Candidate Name"
       />
     </div>
   );
